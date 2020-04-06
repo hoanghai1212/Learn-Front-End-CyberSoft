@@ -1,0 +1,53 @@
+<html>
+
+<head>
+    <title>JavaScript</title>
+    <script type="text/javascript">
+        function KiemTraNhap(giaTri) {
+            if (giaTri == 8) {
+                alert("Số tám");
+            } else {
+                alert("Không phải số tám");
+            }
+        }
+
+        function XetHocLucSinhVien(dtb) {
+            var thongBao = "";
+            switch (dtb) {
+                case 9:
+                    thongBao = "xuất sắc";
+                    break;
+                case 8:
+                    thongBao = "Giỏi";
+                    break;
+                case 7:
+                    thongBao = "Khá";
+                    break;
+                case 6:
+                    thongBao = "Trung bình";
+                    break;
+
+                default:
+                    thongBao = "chưa xét được học lực";
+                    break;
+            }
+            alert(thongBao);
+        }
+
+        function Xuat10Cau() {
+            for (let i = 1; i <= 100; i++) {
+                if (i % 2 != 0) {
+                    document.write("Số " + i + "<br>");
+                }
+
+            }
+        }
+        Xuat10Cau();
+    </script>
+</head>
+
+<body>
+    <input type="button" value="Kiểm tra học lực" onclick="XetHocLucSinhVien(7.5)">
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>
+        Learn event
+    </title>
+    <script>
+        function changeColor(choose) {
+            var txt = document.getElementById("test");
+            if (choose == 1) { // 1 là onfocus
+                txt.style.border = "solid 4px red";
+            } else { // onblur
+                txt.style.border = "solid 1px grey";
+            }
+        }
+
+        function thayDoiChon() {
+            var theP = document.getElementById("xuat");
+            var dropDown = document.getElementById("chon");
+            theP.innerHTML = dropDown.value;
+        }
+
+        function changeColorButton(choose) {
+            var btn = document.getElementById("btn");
+            if (choose == 1) { //hover
+                btn.style.background = "yellow";
+            } else if (choose == 2) { //move out
+                btn.style.background = "";
+            } else if (choose == 3) { //press
+                btn.style.background = "blue";
+            } else {
+                btn.style.background = "pink";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <input type="text" id="test" onfocus="changeColor(1)" onblur="changeColor(0)">
+    <p id="xuat"></p>
+    <select id="chon" onchange="thayDoiChon()">
+        <option>VietNam</option>
+        <option>USA</option>
+        <option>France</option>
+    </select>
+
+    <input type="button" id="btn" value="Nút sự kiện" onmouseup="changeColorButton(4)" onmousedown="changeColorButton(3)" onmouseout="changeColorButton(2)" onmouseover="changeColorButton(1)">
+</body>
+
+</html>

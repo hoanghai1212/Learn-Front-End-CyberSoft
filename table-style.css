@@ -1,0 +1,15 @@
+table {
+    width: 100%;
+    border: 1px solid black;
+    border-collapse: separate;
+    border-spacing: 5px;
+}
+
+td {
+    background-image: url(/Image/bg-gra.png);
+    background-repeat: repeat-y;
+    border: 1px solid black;
+    text-align: center;
+    vertical-align: middle;
+    height: 500px;
+}
