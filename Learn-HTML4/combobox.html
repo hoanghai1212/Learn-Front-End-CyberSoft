@@ -1,0 +1,48 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Combo box</title>
+    <script type="text/javascript">
+        function xuatThongBao() {
+            alert("Hellp alert")
+        }
+
+        function xacNhan() {
+            var xacNhan;
+            xacNhan = confirm("Bạn đã đánh giá khóa học này chưa?");
+            if (xacNhan) {
+                document.write("Xin cảm ơn các bạn");
+            } else {
+                document.write("Vui lòng click vào nút màu vàng để đánh giá");
+            }
+
+        }
+
+        function nhapDuLieu() {
+            var ten, tuoi;
+            ten = prompt("Vui lòng nhập tên: ");
+            tuoi = prompt("Vui lòng nhập tuổi: ");
+            document.write(ten + tuoi);
+        }
+    </script>
+</head>
+
+<body>
+    <form action="#" id="abc" name="test">
+        Chọn tháng:
+        <select>
+            <script type="text/javascript">
+                for ( i = 1; i<=12 ; i++) {
+                    document.writeln("<option value='"+ i +"'> Tháng " + i + " </option>");
+                }
+            </script>
+        </select>
+    </form>
+
+    <input type="button" value="Thông báo" onclick="xuatThongBao()">
+    <input type="button" value="Confirm" onclick="xacNhan()">
+    <input type="button" value="Nhập dự liệu" onclick="nhapDuLieu()">
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<html>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+<head>
+    <title>Tao table dong</title>
+</head>
+
+<body>
+    <form action="#">
+        Số dòng : <input type="text" id="soDong">
+        <br> Số cột : <input type="text" id="soCot">
+        <br>
+        <input type="button" value="Tạo talbe" onclick="return taoTable()">
+    </form>
+    <br>
+    <div id="container">
+
+    </div>
+
+    <script type="text/javascript">
+        function taoTable() {
+            var soDongID = document.getElementById("soDong");
+            var soCotID = document.getElementById("soCot");
+            // NaN = Not a Number ==> hàm kiểm tra số : isNaN (chuỗi) --> là số: False || Không phải số: True
+
+            if (isNaN(soDongID.value) || isNaN(soCotID.value)) {
+                alert("Nhập vào số dòng và số cột");
+                return false;
+            } else {
+                //Tạo table
+                /*  <table>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </table>      
+                */
+
+                //Lấy thẻ div để tạo table
+                var divId = document.getElementById("container");
+                //Lấy số dòng số cột người dùng nhập vào
+                var soDong = parseInt(soDongID.value);
+                var soCot = parseInt(soCotID.value);
+                //Tạo thẻ table
+                var tagTable = document.createElement("table");
+                tagTable.border = 1;
+
+                for (let i = 0; i < soDong; i++) {
+                    //tạo thẻ dòng
+                    var tagTR = document.createElement("tr");
+                    tagTable.appendChild(tagTR);
+                    for (let j = 0; j < soCot; j++) {
+                        var tagTD = document.createElement("td");
+                        var textNode = document.createTextNode(i + "" + j);
+                        tagTD.appendChild(textNode);
+                        tagTR.appendChild(tagTD);
+                    }
+                }
+
+                divId.appendChild(tagTable);
+                return true;
+            }
+
+        }
+    </script>
+</body>
+
+</html>

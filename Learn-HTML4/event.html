@@ -33,10 +33,27 @@
                 btn.style.background = "pink";
             }
         }
+
+        function layGiaTri() {
+            var theP = document.getElementById("noidung");
+            theP.innerHTML = "Xin chào hải đẹp trai";
+            theP.style.color = "red";
+        }
+
+        function layGiaTriTheP2() {
+            var tatcaP = document.getElementsByTagName("p");
+            alert("Có tất cả " + tatcaP.length + " thẻ P" + tatcaP[3].innerHTML);
+        }
+
+        function layGiaTriClass() {
+            var tatcaP = document.getElementsByClassName("demo");
+            alert("Có tất cả " + tatcaP.length + " thẻ P" + tatcaP[0].innerHTML);
+        }
     </script>
 </head>
 
 <body>
+
     <input type="text" id="test" onfocus="changeColor(1)" onblur="changeColor(0)">
     <p id="xuat"></p>
     <select id="chon" onchange="thayDoiChon()">
@@ -46,6 +63,14 @@
     </select>
 
     <input type="button" id="btn" value="Nút sự kiện" onmouseup="changeColorButton(4)" onmousedown="changeColorButton(3)" onmouseout="changeColorButton(2)" onmouseover="changeColorButton(1)">
+
+    <p id="noidung"></p>
+    <input type="button" value="Lấy giá trị" onclick="layGiaTri()">
+    <p class="demo">Thẻ p1</p>
+    <p>Thẻ p2</p>
+    <p class="demo">Thẻ p3</p>
+    <input type="button" value="Lấy giá trị" onclick="layGiaTriTheP2()">
+    <input type="button" value="Lấy giá trị" onclick="layGiaTriClass()">
 </body>
 
 </html>
