@@ -1,0 +1,133 @@
+header,
+section,
+footer,
+aside,
+nav,
+main,
+article,
+figure {
+    display: block;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+}
+
+.clear {
+    clear: both;
+}
+
+.wrapper {
+    width: 50%;
+    margin: auto;
+}
+
+.form-dang-nhap {
+    background-color: #3b5998;
+}
+
+.form-field {
+    float: left;
+    width: 33.33%;
+    padding: 10px 10px;
+    color: #ffffff;
+}
+
+.form-field a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.form-field input[type="email"],
+.form-field input[type="password"] {
+    width: 100%;
+    margin: 3px 0;
+}
+
+.btn-submit {
+    background-color: #4267b2;
+    color: #ffffff;
+    border: solid 1px #314f88;
+    padding: 4px 15px;
+    font-weight: bold;
+    font-size: 12px;
+    border-radius: 2px;
+    margin-top: 24px;
+}
+
+.form-field input[type="checkbox"] {
+    transform: translate(0px, 1.5px);
+}
+
+.btn-submit:hover {
+    background-color: #3b5998;
+    cursor: pointer;
+}
+
+
+/*FORM DANG KY*/
+
+.form-dang-ky {
+    background-color: #eff1f6;
+    padding: 20px;
+}
+
+.formDK-title h1 {
+    margin: 0;
+}
+
+.formDK-title p {
+    margin: 5px 0;
+}
+
+.formDK-title {
+    border-bottom: 1.5px solid grey;
+    margin-bottom: 20px;
+}
+
+.formDK-field label {
+    display: inline-block;
+    width: 25%;
+}
+
+.formDK-field input[type="text"],
+.formDK-field input[type="email"],
+.formDK-field input[type="number"] {
+    width: 70%;
+    height: 30px;
+}
+
+.formDK-field textarea {
+    width: 70%;
+}
+
+.formDK-hobbies label {
+    vertical-align: top;
+}
+
+.formDK-field {
+    margin-bottom: 15px;
+}
+
+.formDK-ngay-sinh select {
+    height: 30px;
+    width: 18%;
+}
+
+.btn-formDK-submit {
+    color: #fff;
+    background-color: #4267b2;
+    border: solid 1px #314f88;
+    padding: 7px 13px;
+    border-radius: 2px;
+}
+
+.formDK-btn {
+    text-align: center;
+    margin-top: 20px;
+}
