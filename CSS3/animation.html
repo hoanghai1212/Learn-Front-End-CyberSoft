@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+</head>
+<style>
+    .demo-2d {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        margin: 200px;
+        /* transform: translate(200px, 200px);
+        -webkit-transform: translate(200px, 200px);
+        -ms-transform: translate(200px, 200px); (x,y)*/
+        /* transform: rotate(60deg); */
+        /* transform: scale(1.5, 0.5);  scale (x,y)*/
+        /* transform: skew(60deg, 50deg); */
+    }
+    
+    .demo-transition {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        margin: 200px;
+        border: 5px solid black;
+        transition: 2s ease;
+    }
+    
+    .demo-transition:hover {
+        transform: rotate(60deg);
+        background-color: yellow;
+        border: 15px solid black;
+        border-radius: 40px;
+    }
+    
+    .custom-animation {
+        width: 200px;
+        height: 200px;
+        background-color: aqua;
+        /* animation-name: myAnimation;
+        animation-duration: 2s;
+        animation-delay: 0.4s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease; */
+        animation: myAnimation 2s ease 0.4s infinite;
+        /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    }
+    
+    @keyframes myAnimation {
+        0% {
+            width: 200px;
+        }
+        50% {
+            width: 500px;
+            background-color: blueviolet;
+        }
+        100% {
+            width: 200px;
+        }
+    }
+</style>
+
+<body>
+    <div class="demo-2d"></div>
+    <div class="demo-transition"></div>
+    <div class="custom-animation"></div>
+</body>
+
+</html>
